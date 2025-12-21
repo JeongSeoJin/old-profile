@@ -1,11 +1,9 @@
-title: Seo Jin Jeong
-theme: jekyll-theme-minimal
+title: Robotics Portfolio
+theme: minima    # <--- 여기를 꼭 minima로 바꾸세요!
 description: >-
   Here is my portfolio
 
-# ▼▼▼ 여기에 이 코드를 추가하세요 ▼▼▼
 header_pages:
   - README.md
-  - projects.md     # qdd-actuator.md 대신 이걸로 변경 추천
+  - qdd-actuator.md
   - about.md
-# ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
