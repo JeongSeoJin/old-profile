@@ -1,9 +1,14 @@
 title: SeoJin Jeong | Robotics Portfolio
 theme: minima    # <--- 여기를 꼭 minima로 바꾸세요!
-# description: >-
-#   Here is my portfolio
+description: >-
+  Robotics Portfolio - Design, Control Theory, Open Source Projects.
+url: "https://jeongseojin.github.io"
 
 header_pages:
   - README.md
   - projects.md
   - about.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
