@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Studys
-permalink: /Studys/
+title: Studies
+permalink: /Studies/
 ---
 
 ### [What is PPO Algorithm?](/quasi-direct-drive-actuator/)

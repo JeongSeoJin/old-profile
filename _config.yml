@@ -7,7 +7,7 @@ url: "https://jeongseojin.github.io"
 header_pages:
   - README.md
   - projects.md
-  - studys.md
+  - studies.md
   - about.md
 
 plugins:
