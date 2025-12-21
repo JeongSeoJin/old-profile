@@ -7,7 +7,7 @@ permalink: /About/
 <div style="text-align: center;">
   <img src="/img/profile-image.png" alt="Profile" style="width: 150px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   
-  <h1>Hi, I'm Seo Jin Jeong! 👋</h1>
+  <h1>Hi, I'm SeoJin Jeong! 👋</h1>
   <p style="color: gray; font-size: 1.1em;">Robotics Enthusiast | Mechanical Engineering Student</p>
 </div>
 
