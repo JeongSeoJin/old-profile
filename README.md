@@ -1,5 +1,4 @@
 
-# Hi! My name is Seo Jin Jeong
 I'm first-year mechanical engineering student. And I love Robotics
 
 ---
