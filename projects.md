@@ -4,10 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
-## 🚀 My Projects
-
-### 1. [High-Performance QDD Actuator](/quasi-direct-drive-actuator/)
-**📅 2024.01 - Present**
+### 1. [Cycloidal QDD Actuator](/quasi-direct-drive-actuator/)
+**2025.7.5 - Present**
 
 > **"Designed a low-cost, high-torque actuator for dynamic legged robots."**
 
@@ -16,4 +14,7 @@ I designed and built a high-torque actuator using a custom cycloidal gear and BL
 * **Key Tech:** BLDC Motor, Cycloidal Gear, FOC Control, CNC
 * **Status:** Testing & Validation
 
-[👉 Click here to view full report](/quasi-direct-drive-actuator/)
+### 2. [Robot Arm](/quasi-direct-drive-actuator/)
+**2025.7.5 - Present**
+
+> **"Designed 3d printed low cost robotic arm"**

@@ -1,7 +1,7 @@
 title: Robotics Portfolio
 theme: minima    # <--- 여기를 꼭 minima로 바꾸세요!
-description: >-
-  Here is my portfolio
+# description: >-
+#   Here is my portfolio
 
 header_pages:
   - README.md

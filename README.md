@@ -1,11 +1,11 @@
-# Hi! My name is Seo Jin Jeong
+<!-- # Hi! My name is Seo Jin Jeong -->
 I'm first-year mechanical engineering student. And I love Robotics
 
 ---
 
-## 🚀 My Projects
+<!-- ## 🚀 My Projects
 
 ### 1. [QDD Actuator Project](https://jeongseojin.github.io/quasi-direct-drive-actuator/)
 > I designed and built a high-torque actuator using a custom cycloidal gear and BLDC motor.
-> * **Tech:** BLDC, Cycloidal Gear, FOC Control, CNC
+> * **Tech:** BLDC, Cycloidal Gear, FOC Control, CNC -->
 
