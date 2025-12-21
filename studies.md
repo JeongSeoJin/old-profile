@@ -4,4 +4,4 @@ title: Studies
 permalink: /studies/
 ---
 
-### [What is PPO Algorithm?](/study/2025/12/21/ppo-algorithm.html)
+### [What is PPO Algorithm?]({% link _posts/2025-12-21-ppo-algorithm.md %})

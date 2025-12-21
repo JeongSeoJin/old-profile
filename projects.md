@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 ---
 
-### [Cycloidal QDD Actuator](/quasi-direct-drive-actuator/)
+### [Cycloidal QDD Actuator]({% link _posts/2025-07-05-ppo-algorithm.md %})
 **2025.7.5 - Present**
 
 > **"Designed a Cycloidal QDD Actuator for dynamic robots."**
@@ -13,8 +13,3 @@ I designed and built a cycloidal quasi-direct drive actuator using a custom cycl
 
 * **Keywards:** BLDC Motor, Cycloidal Gear, QDD architecture, 3D printing, robotic actuator
 * **Status:** Testing & Validation
-
-### [Robot Arm]()
-**2025.7.5 - Present**
-
-> **"Designed 3d printed low cost robotic arm"**
