@@ -10,7 +10,8 @@
     }
   });
 </script>
-
+---
+# Paper Review : Design Principles for Energy Efficient Legged Locomotion and Implementation on the MIT Cheetah Robot
 ---
 ## What is this paper regarding?
 I reviewed this paper to gain insights into **actuator design** and **overall energy management** for legged locomotion to apply these principles to my robotic actuators. This paper represents **three major energy-loss**
