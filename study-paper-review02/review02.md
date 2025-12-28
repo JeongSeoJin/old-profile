@@ -19,7 +19,7 @@ This paper demonstrates accessible 3d-printed low-cost humanoid robot promoting 
   <table>
     <tr>
       <td><img src="fig1.png" width="250" alt="Actuator image 1" /></td>
-      <td><img src="fig2.png" width="300" alt="Actuator image 2" /></td>
+      <!-- <td><img src="fig2.png" width="300" alt="Actuator image 2" /></td> -->
     </tr>
   </table>
 
@@ -35,7 +35,7 @@ I'm now focusing on building reliable robotic actuator to employ reinforcement l
 
 
 ## Critical Thinking & Takeaway
-#### Accessible Low-Cost Actuator
+#### 1. Accessible Low-Cost Actuator
 The actuators are two different size(6512, 5010). As you can see below figures, It's relatively low cost compared to other metalic actuators. For example, 6512 actuator uses M6C12 150KV BLDC drone motor from MAD Components, as5600 encoder and B-G431B-ESC1 as a motor driver. The reducer, and housing parts are all 3d printed with PLA. The cycloidal gears are opted as reducer owing to it's high robustness. 
 
 <table>
@@ -65,7 +65,7 @@ As you can see in the motor specification figure,
 - Maximum Torque : 2.64Nm
 - Nominal Battery : 12S lipo($\approx$ 48V) 
 
-#### Actuator Evaluation
+#### 2 Actuator Evaluation - Efficiency
 A reliable actuator is fundamental to the robot's overall performance. This paper conduct a set of experiments under conditions identical to those on the robot, including 24V power supply, indentical position PD gains, and matching position torque and current bandwidth 
 configurations.
 <td><img src="fig7.png" width="600" alt="Actuator image 2" /></td>
@@ -84,7 +84,7 @@ $$M_{eff} = \frac{P_M}{\tau_c \times v_c} $$
 
 where:
 - $M_{eff}$ : Mechanical Efficiency
-- $tau_c$ : Commanded Torque
+- $\tau_{c}$ : Commanded Torque
 - $v_c$ : Commanded Velocity
 
 Then **Mechanical Efficiency** can be calculated either which represents the **efficiency of 3d-printed reducer**.
@@ -105,6 +105,15 @@ The experiment conducted the actuator performs  across three different speeds. E
 
 This dynamometer method is suitable for strict evaluation seperating mechanical efficiency and total efficiency. we can easily analyze contributions of mechanical impedance and electrical impedance which efficienct method to evaluate custom actuators and reducers.
 
+
+#### 3. Actuator Evaluation - Transmission stiffness
+<td><img src="fig9.png" width="600" alt="Actuator image 2" /></td>
+
+The actuator’s transmission stiffness measured by rigidly fixing the output shaft relative to the actuator housing and measuring motor displacement under a range of static torques. 
+
+The torque command was gradually ramped from 0 Nm to 20 Nm and back in both directions. A linear fit was then applied to the data collected from 4 Nm to 10 Nm, and the inverse of the slope yielded a stiffness of approximately 319.49 Nm/rad (Figure 9). The transmission stiffness can be compensated by opting alternative materials(e.g PA-CF).
+
+#### 4. Actuator Evaluation - Durability
 
 ## Conclusion
 
