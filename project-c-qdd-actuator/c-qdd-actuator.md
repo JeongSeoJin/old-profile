@@ -11,7 +11,7 @@
   });
 </script>
 
-<img src="actual-img/image_4.jpg" style="max-width:510px; height:auto;" alt="Actuator image 1" />
+<td><img src="actual-img/image_4.jpg" width="600" alt="Actuator image 2" /></td>
 
 # Cycloidal QDD Actuator for Dynamic Robots
 
@@ -42,8 +42,8 @@ The current prototype utilizes a 3D-printed and aluminium structure to ensure lo
 
   <table>
     <tr>
-      <td><img src="actual-img/image_1.jpg" width="250" alt="Actuator image 1" /></td>
-      <td><img src="actual-img/image1.png" width="250" alt="Actuator image 2" /></td>
+      <td><img src="actual-img/image_1.jpg" width="300" alt="Actuator image 1" /></td>
+      <td><img src="actual-img/image1.png" width="300" alt="Actuator image 2" /></td>
     </tr>
   </table>
 
@@ -108,8 +108,8 @@ For the current prototype, the gears, shafts and rotor are manufactured from CNC
 
   <table>
     <tr>
-      <td><img src="actual-img/image_2.jpg" width="250" alt="Actuator image 1" /></td>
-      <td><img src="actual-img/image4.png" width="250" alt="Actuator image 2" /></td>
+      <td><img src="actual-img/image_2.jpg" width="300" alt="Actuator image 1" /></td>
+      <td><img src="actual-img/image4.png" width="300" alt="Actuator image 2" /></td>
     </tr>
   </table>
 
