@@ -66,7 +66,7 @@ As you can see in the motor specification figure,
 - Nominal Battery : 12S lipo($\approx$ 48V) 
 
 #### Actuator Evaluation
-A reliable actuator is fundamental to the robot's overall performance. This paper conduct 
+A reliable actuator is fundamental to the robot's overall performance. This paper conduct a set of experiments under conditions identical to those on the robot, including 24V power supply, indentical position PD gains, and matching positionm torque and current bandwidth configurations.
 
 ## Conclusion
 

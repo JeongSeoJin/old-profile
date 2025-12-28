@@ -66,7 +66,45 @@ As you can see in the motor specification figure,
 - Nominal Battery : 12S lipo($\approx$ 48V) 
 
 #### Actuator Evaluation
-A reliable actuator is fundamental to the robot's overall performance. This paper conduct 
+A reliable actuator is fundamental to the robot's overall performance. This paper conduct a set of experiments under conditions identical to those on the robot, including 24V power supply, indentical position PD gains, and matching position torque and current bandwidth 
+configurations.
+<td><img src="fig7.png" width="600" alt="Actuator image 2" /></td>
+
+In the experiment, Actuator Under Test performs Torque(Torque Control) and Damping Actuator performs constant speed(speed control). Two load cells measure torque of the primary actuator. An electrical-power measurement board logged the supply voltage and current, from which electrical input power was calculated.
+
+$$P_M = \tau_m \times \omega_m$$
+where:
+- $P_M$ : Mechanical Output Power
+- $\tau_m$ : Measured Torque 
+- $\tau_m$ : Measured Rotational Speed
+
+Through these testset, Mechanical Output Power can be calculated 
+
+$$M_{eff} = \frac{P_M}{\tau_c \times v_c} $$
+
+where:
+- $M_{eff}$ : Mechanical Efficiency
+- $tau_c$ : Commanded Torque
+- $v_c$ : Commanded Velocity
+
+Then **Mechanical Efficiency** can be calculated either which represents the **efficiency of 3d-printed reducer**.
+
+$$T_{eff} = \frac{P_{measured}}{P_{input}} $$
+
+where:
+- $T_{eff}$ : Total Efficiency
+- $P_{measured}$ : Measured Mechanical Power
+- $P_{input}$ : Input Power
+
+**Total efficiency** reflects the overall actuator
+efficiency, which includes **motor copper losses, driver electrical losses, and mechanical losses.**
+
+<td><img src="fig8.png" width="600" alt="Actuator image 2" /></td>
+
+The experiment conducted the actuator performs  across three different speeds. Each torque and speed command was maintained for one second. As shown in Figure 8, the gearbox exhibits a mechanical efficiency of approximately 90% across most operating conditions. However, at high torque and velocity, efficiency decreases due to heat generation.
+
+This dynamometer method is suitable for strict evaluation seperating mechanical efficiency and total efficiency. we can easily analyze contributions of mechanical impedance and electrical impedance which efficienct method to evaluate custom actuators and reducers.
+
 
 ## Conclusion
 
