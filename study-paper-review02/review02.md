@@ -73,6 +73,7 @@ configurations.
 In the experiment, Actuator Under Test performs Torque(Torque Control) and Damping Actuator performs constant speed(speed control). Two load cells measure torque of the primary actuator. An electrical-power measurement board logged the supply voltage and current, from which electrical input power was calculated.
 
 $$P_M = \tau_m \times \omega_m$$
+
 where:
 - $P_M$ : Mechanical Output Power
 - $\tau_m$ : Measured Torque 
