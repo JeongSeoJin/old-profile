@@ -77,6 +77,7 @@ $$\tau =  K_M \times \sqrt{I^2R}$$
 
 Then to get a same torque, required current halved compared to the baseline. Therefore Joule Heating Loss($I^2R$) is a quarter of baseline which influences significant improved efficiency of the actuators 
 
+<div style="overflow-x: auto;">
 | Parameter | Baseline | Improved | Logic |
 | :--- | :---: | :---: | :--- |
 | **Torque Density** | $1$ | **$2$** | **Doubled** (Given condition) |
@@ -84,6 +85,8 @@ Then to get a same torque, required current halved compared to the baseline. The
 | **Required Current ($I$)**<br><small>(for same torque)</small> | $I_{req}$ | $\frac{1}{2} I_{req}$ | Current **is halved** due to doubled $K_m$ |
 | **Joule Heating Loss ($E_j$)**<br><small></small> | $P_{loss}$ | $\frac{1}{4} P_{loss}$ | Heating scales with current squared<br>$(\frac{1}{2})^2 = \frac{1}{4}$ |
 | **Reduction in Heat Loss** | - | **75% reduction** | $100\% - 25\% = \mathbf{75\%}$ **saved** |
+{: .table .table-striped style="width: 100%; display: table; font-size: 0.9em;"}
+</div>
 
 Consequently, increasing the torque density of the EM motor is highly desirable for efficiency reducing Joule Heating Loss($E_j$)
 
