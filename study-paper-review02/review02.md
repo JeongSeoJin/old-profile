@@ -31,14 +31,14 @@ This paper demonstrates accessible 3d-printed low-cost humanoid robot promoting 
 
 ---
 ## Background of why I read this paper
-This paper deals with 'low-cost', '3d-printed', 'modular actuator', 'zero-shot policy'. These properties are crucial to me for planning to build humanoid robot in the near future. The robot has to be reliable for successful experiment of Reinforcement Learning(RL) in locomotion even it's based on low-cost 3d-printed actuator. Also It should be replaceable quickly to accelerate experiments.
+Since I am planning to build a humanoid robot in the near future, the system must be reliable enough for successful Reinforcement Learning (RL) locomotion experiments, even if it is based on low-cost 3D-printed parts. Also, components should be quickly replaceable to accelerate the experimental cycle.
 
-I'm now focusing on building reliable robotic actuator to employ reinforcement learning successfully. In my prvious project, I have not conducted evaluation yet. Thus this paper is suitable for me, offering insights not only into actuator evaluation methods but also deploying reinforcement learning model on my assembled robots in future.
+I'm now focusing on building reliable robotic actuator to employ reinforcement learning successfully. In my prvious project, I did not conduct evaluations. Thus this paper is highly suitable for me, offering insights not only into actuator evaluation methods but also deploying reinforcement learning model on my robots.
 
 ---
 ## Critical Thinking & Takeaway
 #### 1. Accessible Low-Cost Actuator
-The actuators are two different size(6512, 5010). As you can see below figures, It's relatively low cost compared to other metalic actuators. For example, 6512 actuator uses M6C12 150KV BLDC drone motor from MAD Components, as5600 encoder and B-G431B-ESC1 as a motor driver. The reducer, and housing parts are all 3d printed with PLA. The cycloidal gears are opted as reducer owing to it's high robustness. 
+The actuators are two different sizes(6512, 5010). As shown in the figures below, It's relatively low cost compared to other metallic actuators. For example, 6512 actuator uses M6C12 150KV BLDC drone motor from MAD Components, AS5600 encoder and B-G431B-ESC1 as a motor driver. The reducer, and housing parts are all 3d printed with PLA. The cycloidal gears were selected as reducer due to its high robustness. 
 
 <table>
   <caption>BOM & B-G431B-ESC1 Controller</caption>
@@ -81,7 +81,7 @@ where:
 - $\tau_m$ : Measured Torque 
 - $\tau_m$ : Measured Rotational Speed
 
-Through these testset, Mechanical Output Power can be calculated 
+Through these testset, Mechanical Output Power can be calculated which is power of the actuator.
 
 $$M_{eff} = \frac{P_M}{\tau_c \times v_c} $$
 
@@ -99,14 +99,14 @@ where:
 - $P_{measured}$ : Measured Mechanical Power
 - $P_{input}$ : Input Power
 
-**Total efficiency** reflects the overall actuator
+Also, **Total efficiency** reflects the overall actuator
 efficiency, which includes **motor copper losses, driver electrical losses, and mechanical losses.**
 
 <td><img src="fig8.png" width="600" alt="Actuator image 2" /></td>
 
-The experiment conducted the actuator performs  across three different speeds. Each torque and speed command was maintained for one second. As shown in Figure 8, the gearbox exhibits a mechanical efficiency of approximately 90% across most operating conditions. However, at high torque and velocity, efficiency decreases due to heat generation.
+The experiment conducted the actuator performance across three different speeds. Each torque and speed command was maintained for one second. As shown in Figure 8, the gearbox exhibits a mechanical efficiency of approximately 90% across most operating conditions. However, at high torque and velocity, efficiency decreases due to heat generation.
 
-This dynamometer method is suitable for strict evaluation seperating mechanical efficiency and total efficiency. we can easily analyze contributions of mechanical impedance and electrical impedance which efficienct method to evaluate custom actuators and reducers.
+This dynamometer method is suitable for rigorous evaluation separating mechanical efficiency and total efficiency. we can easily analyze contributions of mechanical losses and electrical losses. This is an effective method to evaluate custom actuators and reducers.
 
 
 #### 3. Actuator Evaluation - Transmission stiffness
@@ -114,7 +114,7 @@ This dynamometer method is suitable for strict evaluation seperating mechanical 
 
 The actuator’s transmission stiffness is measured by rigidly fixing the output shaft relative to the actuator housing and measuring motor displacement under a range of static torques. 
 
-The torque command was gradually ramped from 0 Nm to 20 Nm and back in both directions. A linear fit was then applied to the data collected from 4 Nm to 10 Nm, and the inverse of the slope yielded a stiffness of approximately 319.49 Nm/rad (Figure 9). The transmission stiffness can be compensated by opting alternative materials(e.g PA-CF).
+The torque command was gradually ramped from 0 Nm to 20 Nm and back in both directions. A linear fit was then applied to the data collected from 4 Nm to 10 Nm, and the inverse of the slope yielded a stiffness of approximately 319.49 Nm/rad (Figure 9). The transmission stiffness can be enhanced by opting alternative materials(e.g PA-CF).
 
 #### 4. Actuator - durability 
 Durability is a primary consideration of 3d-printed actuator. The experiment was conducted for 60-hours lifting a pendulum(0.5kg, 0.5m) through range of -45 degrees to 90 degrees at a frequency of 0.5Hz. Consequently, efficiency and backlash remained within acceptable limits throughout the 60-hours test. The durability is remarkable especially considering cycloidal gear thickness is only 4mm. This finding gives me confidence in my own project, as my actuator design shares similar gear dimensions.
@@ -122,7 +122,7 @@ Durability is a primary consideration of 3d-printed actuator. The experiment was
 <td><img src="fig10.png" width="600" alt="Actuator image 2" /></td>
 
 #### 5. Legged Locomotion
-This paper achieve a direct sim-to-real transfer of a Isaac Gym-trained policy to the physical robot without relying on additional state estimation methods. This is crucial for locomotive robot using 3d printed actuator which causes backlash. The authors formulate the locomotion task as a Partially Observed Markov Decision Process(POMDP) and use a standard Proximal Policy Optimization(PPO) algorithm to learn a control policy
+This paper achieve a direct sim-to-real transfer of a Isaac Gym-trained policy to the physical robot without relying on additional state estimation methods. This is crucial for locomotive robot using 3d printed actuator which causes backlash. The authors formulate the locomotion task as a Partially Observed Markov Decision Process(POMDP) and use a standard Proximal Policy Optimization(PPO) algorithm to learn a control policy.
 
 proprioceptive observations from the robot hardware:
 
@@ -132,7 +132,7 @@ proprioceptive observations from the robot hardware:
 
 Additional inputs include the commanded linear volocity provided by the user and the previous time-step action. Notably, the experiement utilized only 30% of the actuator's torque limit, suggesting that the actuators are operating well within their capacity. 
 
-#### Additional Insights
+#### 6. Additional Insights
 Based on the specifications of the 6512 motor (2.64 Nm) and a gear ratio of 15:1 with an estimated efficiency of 90%, the theoretical maximum torque is approximately 35.64 Nm.
 
 However, in this experimental setup, I estimate the practical maximum torque to be restricted to around 20–24 Nm. While the input voltage is 24V (compared to the motor's rated 48V), the primary limiting factor is likely a software-imposed current limit designed to protect the 3D-printed plastic gears from structural failure, rather than the motor's raw capability.
