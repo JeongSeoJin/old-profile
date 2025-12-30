@@ -14,7 +14,7 @@
 # Paper Review : "Demonstrating Berkeley Humanoid Lite: An Open-source, Accessible, and Customizable 3D-printed Humanoid Robot"
 ---
 ## What is this paper regarding?
-This paper demonstrates accessible 3d-printed low-cost humanoid robot promoting democratization in humanoid robotics. The core design is a **modular 3d-printed** actuator easily replaceable, preventing delays of an experiment from broken parts of robots. Also conduct experiments to validate **reliability** of 3d-printed actuator. Futhermore, It showcased **zero-shot policy transfer** from simulation to hardware, highlighting the platform's suitability for research validation.
+This paper demonstrates accessible 3d-printed low-cost humanoid robot promoting democratization in humanoid robotics. The core design is a **modular 3d-printed** actuator easily replaceable, preventing delays of an experiment from broken parts of robots. Also The authors conduct experiments to validate **reliability** of 3d-printed actuator. Futhermore, the experiments showcased **zero-shot policy transfer** from simulation to hardware, highlighting the platform's suitability for research validation.
 
   <table>
     <tr>
