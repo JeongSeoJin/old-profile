@@ -188,39 +188,6 @@ class Vision:
             print(f"  theta : {pose['theta']}")
             # print(f"  grasp_width : {pose['grasp_width']}")
 
-        # 시각화를 위한 코드 (옵션)
-        # sphere_size = 0.01  # 중심점 크기 조절
-        # centroid_spheres = []
-
-        # for centroid in centroids:
-        #     sphere = o3d.geometry.TriangleMesh.create_sphere(radius=sphere_size)
-        #     sphere.translate(centroid)  # 중심점을 구 위치로 이동
-        #     sphere.paint_uniform_color([0, 1, 0])  # 초록색으로 색칠
-        #     centroid_spheres.append(sphere)
-
-        # # Grasp Pose의 주축을 화살표로 시각화
-        # arrows = []
-        # for pose in grasp_poses:
-        #     start_point = pose['position']
-        #     end_point = start_point + pose['principal_axis'] * 0.1  # 화살표 길이 조절
-        #     direction = pose['principal_axis']
-            
-        #     # 회전 행렬을 생성하여 화살표 회전
-        #     z_axis = np.array([0, 0, 1])
-        #     rotation_matrix = np.eye(3)
-            
-        #     if not np.allclose(direction, z_axis):
-        #         axis = np.cross(z_axis, direction)
-        #         angle = np.arccos(np.dot(z_axis, direction))
-        #         rotation_matrix = o3d.geometry.get_rotation_matrix_from_axis_angle(axis * angle)
-            
-        #     arrow = o3d.geometry.TriangleMesh.create_arrow(
-        #         cylinder_radius=0.01, cone_radius=0.02, cylinder_height=0.1, cone_height=0.02
-        #     )
-        #     arrow.translate(start_point)
-        #     arrow.rotate(rotation_matrix, center=start_point)
-        #     arrow.paint_uniform_color([1, 0, 0])  # 빨간색으로 색칠
-            
         #     arrows.append(arrow)
 
         return grasp_poses[pick_ind], grasp_poses[place_ind]
