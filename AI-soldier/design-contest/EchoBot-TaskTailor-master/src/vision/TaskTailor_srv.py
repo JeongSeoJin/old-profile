@@ -191,3 +191,5 @@ if __name__ == "__main__":
     server = GUI() # 서비스 클래스 인스턴스 생성
     print("TaskTailor Service is ready.")
     rospy.spin() # 서비스 요청 대기 (무한 루프)
+
+

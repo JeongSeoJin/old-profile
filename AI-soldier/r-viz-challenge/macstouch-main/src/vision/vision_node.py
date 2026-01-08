@@ -279,7 +279,7 @@ class Vision:
         # 비용을 계산해서 가장 좋은 후보를 선택해요.
         annotated_frame = self.yolo_color.copy()
 
-        x, y, x2, y2 = bbox
+        x, y, x2, y2 = bbox 
         w = x2 - x
         h = y2 - y
 
