@@ -99,6 +99,31 @@ std: 1.0 ~ 0.8 수준으로 서서히 감소.
 
 지금 std가 줄어들고 있다는 건, 로봇이 **"확신"**을 가지기 시작했다는 아주 좋은 신호입니다!
 
+
+1. 🧮 일반적인 수식 (데이터가 N개 있을 때)우리가 배치(Batch)로 모은 데이터 $x_1, x_2, ..., x_N$이 있을 때의 표준편차 $\sigma$ (시그마)는 다음과 같습니다.
+$$\sigma = \sqrt{\text{Variance}} = \sqrt{\frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}$$
+$\sigma$: 표준편차 (Standard Deviation)
+
+$N$: 데이터의 개수 (예: batch_size = 256)
+
+$x_i$: 각 데이터 값 (예: 각 스텝에서의 보상 값)
+
+$\mu$: 데이터들의 평균 ($\frac{1}{N}\sum x_i$)[의미]"평균($\mu$)으로부터 각 데이터가 평균적으로 얼마나 떨어져 있는가?"분산은 제곱을 해서 단위가 뻥튀기되지만(예: 점수$^2$), 표준편차는 다시 루트를 씌워서 원래 데이터와 단위가 같아집니다. (예: 점수)
+
+2. 🤖 PPO 로그의 std (Gaussian Policy)사용자님의 로그에 찍히는 train/std는 위처럼 데이터를 다 모아서 계산하는 게 아니라, 로봇의 뇌(Policy)가 가지고 있는 "행동 범위 파라미터" 그 자체입니다.PPO는 행동(Action)을 **정규분포(Gaussian Distribution)**에서 뽑습니다. 그 확률 밀도 함수 수식에서 $\sigma$가 바로 표준편차입니다.
+
+$$\pi(a|s) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( - \frac{(a - \mu)^2}{2\sigma^2} \right)$$
+
+$\mu$ (평균): 로봇이 생각하는 "최적의 행동" (뉴럴 네트워크가 계산한 값
+
+)$\sigma$ (표준편차): 로봇이 그 행동 주변을 "얼마나 탐험(Randomness)할지" (로그에 찍히는 std)
+
+$\sigma$가 크면: 그래프가 납작하고 넓게 퍼짐 $\rightarrow$ "이거저거 다 해봐!" (탐험)
+
+$\sigma$가 작으면: 그래프가 뾰족함 $\rightarrow$ "난 내 판단을 확신해, 딱 이것만 할 거야." (수렴)
+
+
+
 ## approx_kl
 
 $$D_{KL}(\pi_{old} || \pi_{new}) = \mathbb{E} \left[ \log \frac{\pi_{old}(a|s)}{\pi_{new}(a|s)} \right] = \mathbb{E} [ \log \pi_{old}(a|s) - \log \pi_{new}(a|s) ]$$
